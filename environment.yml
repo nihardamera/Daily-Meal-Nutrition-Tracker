@@ -1,0 +1,11 @@
+name: nutrition-tracker-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - streamlit
+  - requests
+  - pillow
+  - python-dotenv
+  - pip

@@ -9,3 +9,4 @@ dependencies:
   - pillow
   - python-dotenv
   - pip
+  - pymongo

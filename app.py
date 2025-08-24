@@ -3,6 +3,7 @@ from PIL import Image
 import base64
 import io
 from gemini_api import analyze_meal_image, generate_daily_summary
+from database import log_meal_to_db
 
 st.set_page_config(
     page_title="Daily Meal Nutrition Tracker",
@@ -43,7 +44,11 @@ if uploaded_file is not None:
 
             if analysis_data and "error" not in analysis_data:
                 st.session_state.daily_meals.append(analysis_data)
-                
+            
+                log_status = log_meal_to_db(analysis_data)
+                if log_status != "Success":
+                    st.warning(f"Could not save meal to database. Reason: {log_status}")
+           
                 st.header("Step 2: Nutritional Analysis")
                 st.success("Analysis Complete!")
                 

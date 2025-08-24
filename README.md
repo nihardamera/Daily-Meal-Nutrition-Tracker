@@ -5,14 +5,16 @@ This is a Python application that uses AI to analyze meals from images, track nu
 ## Features
 
   - **Image-to-Nutrition Analysis**: Upload a photo of your meal to get an instant breakdown of the food item, serving size, calories, and macronutrients.
-  - **Daily Meal Logging**: Automatically logs each analyzed meal to track your daily consumption.
+  - **Persistent Storage**: Logs every analyzed meal to a cloud-based MongoDB database.
+  - **Daily Meal Logging**: Tracks your daily consumption within the app session.
   - **AI-Powered Daily Summary**: Generates a comprehensive report of your total intake at the end of the day.
-  - **Personalized Suggestions**: Provides recommendations on what to eat to balance your diet based on your daily intake.
+  - **Personalized Suggestions**: Provides recommendations on what to eat to balance your diet.
 
 ## Tech Stack
 
   - **Frontend**: Streamlit
   - **AI/ML**: Google Gemini API
+  - **Database**: MongoDB Atlas
   - **Language**: Python
 
 ## Setup and Installation
@@ -46,20 +48,21 @@ This is a Python application that uses AI to analyze meals from images, track nu
     pip install -r requirements.txt
     ```
 
-4.  **Set Up Your API Key**
+4.  **Set Up Your Credentials**
 
-    This project requires a Google Gemini API key.
-
-      - Obtain your API key from the [Google AI Studio](https://aistudio.google.com/app/apikey).
-      - Create a `.env` file in the root of the project and add your key:
+      - Create a `.env` file in the root of the project.
+      - Obtain your Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+      - Obtain your MongoDB Atlas connection string from the [MongoDB Atlas Dashboard](https://cloud.mongodb.com/).
+      - Add your credentials to the `.env` file like this:
         ```
         GEMINI_API_KEY="YOUR_API_KEY_HERE"
+        MONGO_URI="YOUR_MONGO_URI_HERE"
         ```
-      - Ensure you have a `.gitignore` file that includes `.env` to protect your key.
+      - Ensure your `.gitignore` file includes `.env` to protect your keys.
 
 ## How to Run the Application
 
 Once you have completed the setup, you can run the Streamlit application with the following command:
 
-```bash 
+```bash
 streamlit run app.py

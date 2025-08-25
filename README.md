@@ -1,6 +1,6 @@
-# Agentic AI Nutrition Tracker
+# Daily Meal Nutrition Tracker and Logger
 
-This is a Python application that uses AI to analyze meals from images, track nutritional intake, and provide a daily summary with dietary suggestions.
+This is a Python application that uses AI to analyze meals from images, track nutritional intake along with logging, and provide a daily summary with dietary suggestions.
 
 ## Features
 

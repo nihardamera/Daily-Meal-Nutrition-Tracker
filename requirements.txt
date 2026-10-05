@@ -1,0 +1,6 @@
+# Direct dependencies, pinned to the versions the app and tests were run with (Python 3.12).
+pillow==12.3.0
+pymongo==4.18.2
+python-dotenv==1.2.4
+requests==2.34.2
+streamlit==1.65.0

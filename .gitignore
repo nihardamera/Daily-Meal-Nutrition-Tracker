@@ -1,17 +1,15 @@
-# Ignore the virtual environment folder
-/venv
-/.venv
+# Virtual environments
+.venv/
+venv/
 
-# Ignore Python cache files
+# Python cache files
+__pycache__/
+*.pyc
+.pytest_cache/
 
-**pycache**/
-\*.pyc
-
-# Ignore the .env file to keep secrets safe
-
+# Secrets
 .env
 
-# Ignore IDE/editor-specific files
-
+# IDE/editor-specific files
 .idea/
 .vscode/
